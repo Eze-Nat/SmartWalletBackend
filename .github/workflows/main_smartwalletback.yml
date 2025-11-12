@@ -27,7 +27,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish project
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish src/SmartWallet.API/SmartWallet.API.csproj -c Release -o ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -43,6 +43,8 @@ jobs:
       contents: read
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
@@ -62,9 +64,11 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_84277B8E68DB44C4BCB57DAD457D299A }}
 
       - name: Install dotnet-ef tool
+        shell: powershell
         run: |
           dotnet tool install --global dotnet-ef --version 8.*
-          echo "$env:PATH;$env:USERPROFILE\.dotnet\tools" >> $env:GITHUB_ENV
+          # Export PATH so the installed tool is available in later steps
+          echo "PATH=$env:PATH;$env:USERPROFILE\.dotnet\tools" >> $env:GITHUB_ENV
 
       - name: Update database with EF Core migrations
         working-directory: src/SmartWallet.Infrastructure
