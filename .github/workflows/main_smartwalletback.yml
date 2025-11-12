@@ -10,11 +10,10 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read # Required for actions/checkout
+      contents: read #This is required for actions/checkout
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
@@ -25,16 +24,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish project
-        run: dotnet publish -c Release -o ./publish
-
-      - name: Verify publish output
-        run: dir ./publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: net-app
-          path: ./publish
+          name: .net-app
+          path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
     runs-on: windows-latest
@@ -55,11 +51,8 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: net-app
+          name: .net-app 
           path: ./publish
-
-      - name: Verify downloaded files
-        run: dir ./publish
       
       - name: Login to Azure
         uses: azure/login@v2
