@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -20,17 +20,20 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      - name: Restore dependencies
+        run: dotnet restore
+
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Release --no-restore
 
       - name: Publish project
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish -c Release -o ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          name: net-app
+          path: ./publish
 
   deploy:
     runs-on: windows-latest
@@ -40,20 +43,17 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: net-app
+          path: ./publish
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
 
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: .net-app 
-          path: ./publish
-      
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -64,7 +64,7 @@ jobs:
       - name: Install dotnet-ef tool
         run: |
           dotnet tool install --global dotnet-ef --version 8.*
-          echo "PATH=$Env:PATH;$Env:USERPROFILE\.dotnet\tools" >> $GITHUB_ENV
+          echo "$env:PATH;$env:USERPROFILE\.dotnet\tools" >> $env:GITHUB_ENV
 
       - name: Update database with EF Core migrations
         working-directory: src/SmartWallet.Infrastructure
