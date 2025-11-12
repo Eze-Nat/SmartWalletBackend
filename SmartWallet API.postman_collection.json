@@ -1,0 +1,1960 @@
+{
+	"info": {
+		"_postman_id": "34e6e949-abe0-4c01-aaf4-6612afa9c2f1",
+		"name": "SmartWallet API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49992302",
+		"_collection_link": "https://julianbison-3922665.postman.co/workspace/Julian-Bison's-Workspace~400c3c4e-71e9-4a6f-8b93-b5683d5d6e21/collection/49992302-34e6e949-abe0-4c01-aaf4-6612afa9c2f1?action=share&source=collection_link&creator=49992302"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/api/Auth/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"string\",\n  \"password\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"string\",\n  \"password\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dolares",
+			"item": [
+				{
+					"name": "/api/Dolares/:tipo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{AzureUrl}}/api/Dolares/:tipo",
+							"host": [
+								"{{AzureUrl}}"
+							],
+							"path": [
+								"api",
+								"Dolares",
+								":tipo"
+							],
+							"variable": [
+								{
+									"key": "tipo",
+									"value": "oficial"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Dolares/:tipo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Dolares",
+										":tipo"
+									],
+									"variable": [
+										{
+											"key": "tipo"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"moneda\": \"string\",\n  \"casa\": \"string\",\n  \"nombre\": \"string\",\n  \"compra\": 279.559418461941,\n  \"venta\": 5363.808156231879,\n  \"fechaActualizacion\": \"1995-01-04T08:54:36.703Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TransactionLedgers",
+			"item": [
+				{
+					"name": "/api/TransactionLedgers/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/TransactionLedgers/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"TransactionLedgers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/TransactionLedgers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"TransactionLedgers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/TransactionLedgers/wallet/:walletId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/TransactionLedgers/wallet/:walletId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"TransactionLedgers",
+								"wallet",
+								":walletId"
+							],
+							"variable": [
+								{
+									"key": "walletId",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/TransactionLedgers/wallet/:walletId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"TransactionLedgers",
+										"wallet",
+										":walletId"
+									],
+									"variable": [
+										{
+											"key": "walletId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/TransactionLedgers/transaction/:transactionId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/TransactionLedgers/transaction/:transactionId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"TransactionLedgers",
+								"transaction",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/TransactionLedgers/transaction/:transactionId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"TransactionLedgers",
+										"transaction",
+										":transactionId"
+									],
+									"variable": [
+										{
+											"key": "transactionId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/TransactionLedgers/range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/TransactionLedgers/range?from=2014-08-28T10:15:48.224Z&to=2014-08-28T10:15:48.224Z",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"TransactionLedgers",
+								"range"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2014-08-28T10:15:48.224Z"
+								},
+								{
+									"key": "to",
+									"value": "2014-08-28T10:15:48.224Z"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/TransactionLedgers/range?from=2014-08-28T10:15:48.224Z&to=2014-08-28T10:15:48.224Z",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"TransactionLedgers",
+										"range"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2014-08-28T10:15:48.224Z"
+										},
+										{
+											"key": "to",
+											"value": "2014-08-28T10:15:48.224Z"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "/api/Transactions/:id/fail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/:id/fail",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								":id",
+								"fail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/:id/fail",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										":id",
+										"fail"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/:id/cancel",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/:id/cancel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								":id",
+								"cancel"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/:id/cancel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										":id",
+										"cancel"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/wallet/:walletId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/wallet/:walletId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								"wallet",
+								":walletId"
+							],
+							"variable": [
+								{
+									"key": "walletId",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/wallet/:walletId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										"wallet",
+										":walletId"
+									],
+									"variable": [
+										{
+											"key": "walletId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/range?from=2014-08-28T10:15:48.224Z&to=2014-08-28T10:15:48.224Z",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								"range"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2014-08-28T10:15:48.224Z"
+								},
+								{
+									"key": "to",
+									"value": "2014-08-28T10:15:48.224Z"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/range?from=2014-08-28T10:15:48.224Z&to=2014-08-28T10:15:48.224Z",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										"range"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2014-08-28T10:15:48.224Z"
+										},
+										{
+											"key": "to",
+											"value": "2014-08-28T10:15:48.224Z"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/deposits",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 4035.9797940449475,\n  \"currencyCode\": \"str\",\n  \"walletId\": \"67f5cbaf-385a-b518-bebe-e4fb928456ad\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/deposits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								"deposits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 4035.9797940449475,\n  \"currencyCode\": \"str\",\n  \"walletId\": \"67f5cbaf-385a-b518-bebe-e4fb928456ad\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/deposits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										"deposits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/withdrawals",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 4035.9797940449475,\n  \"currencyCode\": \"str\",\n  \"walletId\": \"67f5cbaf-385a-b518-bebe-e4fb928456ad\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Transactions/withdrawals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								"withdrawals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 4035.9797940449475,\n  \"currencyCode\": \"str\",\n  \"walletId\": \"67f5cbaf-385a-b518-bebe-e4fb928456ad\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/withdrawals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										"withdrawals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/Transactions/transfers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 30000,\n  \"currencyCode\": \"ARS\",\n  \"destinationWalletId\": \"9be2d923-b941-4889-b4a0-9ddeb1a21245\",\n  \"sourceWalletId\": \"27f26cb2-293f-4170-8f8b-1f26d772c675\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{AzureUrl}}/api/Transactions/transfers",
+							"host": [
+								"{{AzureUrl}}"
+							],
+							"path": [
+								"api",
+								"Transactions",
+								"transfers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 8146.204037239967,\n  \"currencyCode\": \"str\",\n  \"destinationWalletId\": \"1f3fefc2-385b-245f-2a02-f2a4a4028fd5\",\n  \"sourceWalletId\": \"ca6d09d8-9749-631b-6bc5-5bc4d9bf3690\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Transactions/transfers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Transactions",
+										"transfers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/api/User/by-email/:email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/User/by-email/:email",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"by-email",
+								":email"
+							],
+							"variable": [
+								{
+									"key": "email",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/User/by-email/:email",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										"by-email",
+										":email"
+									],
+									"variable": [
+										{
+											"key": "email"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"email\": \"P36VWSZ9zsKjhhI@LYN.khj\",\n  \"password\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/User/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\",\n  \"email\": \"P36VWSZ9zsKjhhI@LYN.khj\",\n  \"password\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/User/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"email\": \"mcqsf2vYYPKOn@EdwXlWli.sooe\",\n  \"password\": \"string\",\n  \"role\": 2\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/User/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\",\n  \"email\": \"mcqsf2vYYPKOn@EdwXlWli.sooe\",\n  \"password\": \"string\",\n  \"role\": 2\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/User/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/User/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/User/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"active\": true\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/User/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"active\": true\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/User/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/:id/active",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/User/:id/active",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								":id",
+								"active"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/User/:id/active",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										":id",
+										"active"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/User",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/User",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api/User/:userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/User/:userId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/User/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"User",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "/api/Wallet/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Wallet/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Wallet",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Wallet/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Wallet",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"alias\": \"jVlqjVlq\",\n  \"name\": \"string\",\n  \"id\": \"ced89c4c-504b-cf6c-35fa-a016ec50dc6b\",\n  \"userID\": \"c27a6b14-a535-134c-53d9-108ae6926141\",\n  \"user\": {\n    \"email\": \"wK6Nf5TzKYC@lywTBuFAkreIbqhchn.ax\",\n    \"name\": \"string\",\n    \"id\": \"f16a7763-83fe-3218-708e-dbb59ca364bf\",\n    \"passwordHash\": \"string\",\n    \"role\": 2,\n    \"createdAt\": \"2013-05-23T22:13:58.251Z\",\n    \"updatedAt\": \"1964-04-18T06:53:19.303Z\",\n    \"active\": true\n  },\n  \"currencyCode\": 978,\n  \"balance\": 927.0814652311765,\n  \"createdAt\": \"1999-11-19T00:20:03.354Z\",\n  \"sourceLedgers\": [\n    {\n      \"id\": \"43c3a359-4261-2014-1842-9d0208b2b522\",\n      \"type\": 2,\n      \"amount\": 7849.889655792601,\n      \"currencyCode\": 840,\n      \"status\": 2,\n      \"timestamp\": \"1960-09-25T19:01:05.257Z\",\n      \"metadata\": \"string\",\n      \"transactionId\": \"dabba3ac-a2e1-2aea-a6d8-993556cff0fe\",\n      \"walletId\": \"80339291-48e6-eb8d-d18c-74199ae8aa86\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    },\n    {\n      \"id\": \"b6ea3120-3ece-8164-b115-b6fb5311b837\",\n      \"type\": 0,\n      \"amount\": 8518.58209011089,\n      \"currencyCode\": 32,\n      \"status\": 2,\n      \"timestamp\": \"2018-05-04T12:06:26.399Z\",\n      \"metadata\": \"string\",\n      \"transactionId\": \"53b103b6-ec49-af8d-c76e-0be2cb1b37be\",\n      \"walletId\": \"7c839f02-8b05-4387-ffaf-ee18d086736d\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    }\n  ],\n  \"destinationLedgers\": [\n    {\n      \"id\": \"07351861-81c7-5f94-cee4-2489f78c7bbe\",\n      \"type\": 0,\n      \"amount\": 2501.6906446429816,\n      \"currencyCode\": 32,\n      \"status\": 0,\n      \"timestamp\": \"2025-09-30T01:35:30.573Z\",\n      \"metadata\": \"string\",\n      \"transactionId\": \"80cf979c-1ece-5e1a-5496-a3c5cc6bf3f0\",\n      \"walletId\": \"85ad0173-8e81-dad3-12b3-e38376394b4a\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    },\n    {\n      \"id\": \"cc95f88f-4e45-b924-e4e5-20867f34867b\",\n      \"type\": 1,\n      \"amount\": 8333.225700112343,\n      \"currencyCode\": 840,\n      \"status\": 1,\n      \"timestamp\": \"1991-12-11T16:52:25.815Z\",\n      \"metadata\": \"string\",\n      \"transactionId\": \"23ae2c38-888a-8114-cd0e-5e37587ff252\",\n      \"walletId\": \"760a7509-cceb-405d-e924-e1fa11934a76\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    }\n  ],\n  \"receivedTransfers\": [\n    {\n      \"id\": \"56c8bcbb-9a7f-0066-11fb-34c3abf7826e\",\n      \"type\": 0,\n      \"amount\": 3372.204185389092,\n      \"currencyCode\": 840,\n      \"status\": 3,\n      \"createdAt\": \"1955-03-28T08:18:02.045Z\",\n      \"walletId\": \"e225ec03-2426-ca6e-77d5-412f65b61ec9\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      },\n      \"destinationWalletId\": \"aae72bc2-7ebc-f33d-4236-5a8f1aed1a09\",\n      \"destinationWallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    },\n    {\n      \"id\": \"5b858faf-734e-a7ba-89a3-9ba4e9ae9d23\",\n      \"type\": 0,\n      \"amount\": 8790.53928815803,\n      \"currencyCode\": 32,\n      \"status\": 0,\n      \"createdAt\": \"1947-08-01T06:31:02.794Z\",\n      \"walletId\": \"4e715075-f377-8509-f4e2-7b7bbad7470d\",\n      \"wallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      },\n      \"destinationWalletId\": \"c1ecf7fa-9dbd-8df6-afe7-7a0700ef6dfb\",\n      \"destinationWallet\": {\n        \"value\": \"<Circular reference to #/components/schemas/SmartWallet.Domain.Entities.Wallet detected>\"\n      }\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/Wallet/by-alias/:alias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Wallet/by-alias/:alias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Wallet",
+								"by-alias",
+								":alias"
+							],
+							"variable": [
+								{
+									"key": "alias",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Wallet/by-alias/:alias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Wallet",
+										"by-alias",
+										":alias"
+									],
+									"variable": [
+										{
+											"key": "alias"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"c0da61f7-d1ba-82ab-4d81-717ee8829b04\",\n  \"userId\": \"83620d03-b2ca-dcf9-3cdb-09e62eadd7df\",\n  \"userName\": \"string\",\n  \"userEmail\": \"string\",\n  \"name\": \"string\",\n  \"currencyCode\": \"string\",\n  \"alias\": \"string\",\n  \"balance\": 7739.98630714338,\n  \"createdAt\": \"1985-11-19T04:18:06.334Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/Wallet/by-user/:userId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Wallet/by-user/:userId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Wallet",
+								"by-user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "584a9008-5d42-d717-200d-f3c1d5559c6b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Wallet/by-user/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Wallet",
+										"by-user",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"54bc50dc-754b-3881-e4e1-552bb8c5782e\",\n    \"userId\": \"d67fb0f1-9b11-4ca7-faec-aec97a04ba94\",\n    \"userName\": \"string\",\n    \"userEmail\": \"string\",\n    \"name\": \"string\",\n    \"currencyCode\": \"string\",\n    \"alias\": \"string\",\n    \"balance\": 9406.723962028278,\n    \"createdAt\": \"1959-09-01T08:26:10.760Z\"\n  },\n  {\n    \"id\": \"b923cb2a-42a0-2651-8eef-1c4728b7259c\",\n    \"userId\": \"ec927d1a-fd3b-bf7d-f915-ea03d2f9ed87\",\n    \"userName\": \"string\",\n    \"userEmail\": \"string\",\n    \"name\": \"string\",\n    \"currencyCode\": \"string\",\n    \"alias\": \"string\",\n    \"balance\": 466.27748260713366,\n    \"createdAt\": \"1995-02-07T14:07:05.528Z\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/api/Wallet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{AzureUrl}}/api/Wallet",
+							"host": [
+								"{{AzureUrl}}"
+							],
+							"path": [
+								"api",
+								"Wallet"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Wallet",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Wallet"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"54bc50dc-754b-3881-e4e1-552bb8c5782e\",\n    \"userId\": \"d67fb0f1-9b11-4ca7-faec-aec97a04ba94\",\n    \"userName\": \"string\",\n    \"userEmail\": \"string\",\n    \"name\": \"string\",\n    \"currencyCode\": \"string\",\n    \"alias\": \"string\",\n    \"balance\": 9406.723962028278,\n    \"createdAt\": \"1959-09-01T08:26:10.760Z\"\n  },\n  {\n    \"id\": \"b923cb2a-42a0-2651-8eef-1c4728b7259c\",\n    \"userId\": \"ec927d1a-fd3b-bf7d-f915-ea03d2f9ed87\",\n    \"userName\": \"string\",\n    \"userEmail\": \"string\",\n    \"name\": \"string\",\n    \"currencyCode\": \"string\",\n    \"alias\": \"string\",\n    \"balance\": 466.27748260713366,\n    \"createdAt\": \"1995-02-07T14:07:05.528Z\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/api/Wallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"alias\": \"string\",\n  \"currencyCode\": \"string\",\n  \"initialBalance\": 7677.049868774683,\n  \"name\": \"string\",\n  \"id\": \"ac7f4867-a98d-406c-6226-e828709aadf2\",\n  \"userId\": \"9f73861e-f3fb-56fc-baca-a4874a43be77\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Wallet",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Wallet"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"alias\": \"string\",\n  \"currencyCode\": \"string\",\n  \"initialBalance\": 7677.049868774683,\n  \"name\": \"string\",\n  \"id\": \"ac7f4867-a98d-406c-6226-e828709aadf2\",\n  \"userId\": \"9f73861e-f3fb-56fc-baca-a4874a43be77\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Wallet",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Wallet"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"c0da61f7-d1ba-82ab-4d81-717ee8829b04\",\n  \"userId\": \"83620d03-b2ca-dcf9-3cdb-09e62eadd7df\",\n  \"userName\": \"string\",\n  \"userEmail\": \"string\",\n  \"name\": \"string\",\n  \"currencyCode\": \"string\",\n  \"alias\": \"string\",\n  \"balance\": 7739.98630714338,\n  \"createdAt\": \"1985-11-19T04:18:06.334Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
