@@ -29,7 +29,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: net-app # ✅ sin punto
+          name: net-app
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
@@ -51,7 +51,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: net-app # ✅ mismo nombre
+          name: net-app 
           path: ./publish
       
       - name: Login to Azure
